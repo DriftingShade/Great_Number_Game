@@ -20,6 +20,16 @@
             </form>
         </div>
     {% endif %}
+    {% if guess == number and number == 69 %}
+        <div class="card m-auto w-25 text-center mt-5 bg-success">
+            <h2>YOU GOT IT!!!</h2>
+            <h5>Nice.</h5>
+            <p>Would you like to play again?</p>
+            <form action="/newgame" method="get">
+                <button class="btn btn-primary">Play Again!</button>
+            </form>
+        </div>
+    {% endif %}
     <form action="/result" method="post">
     {% if guess > number %}
         <div class="card m-auto w-25 text-center mt-5 bg-danger">
